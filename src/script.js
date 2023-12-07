@@ -64,7 +64,7 @@ scene.add(ambientLight);
 
 new RGBELoader()
     .setPath('environment/')
-    .load('canary_wharf_1k.hdr', (texture) => {
+    .load('wide_street_01_1k.hdr', (texture) => {
         texture.mapping = THREE.EquirectangularReflectionMapping;
 
         // scene.background = texture;
