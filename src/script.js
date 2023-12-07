@@ -102,7 +102,7 @@ const gltfLoader = new GLTFLoader();
 gltfLoader.setDRACOLoader(dracoLoader);
 
 // Load main model
-gltfLoader.load("/models/city.glb", (gltf) => {
+gltfLoader.load(`/models/model.glb?ver=${version()}`, (gltf) => {
     model = gltf.scene;
     scene.add(model);
 });
@@ -114,6 +114,10 @@ gltfLoader.load("/models/city.glb", (gltf) => {
 /**
  * Functioins
  */
+
+function version() {
+    return (new Date()).getTime();
+}
 
 // Auto Resize
 window.addEventListener("resize", () => {
